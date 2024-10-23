@@ -2,15 +2,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
-public class Answer {
-    String answerId;
+public class Answer extends Post {
+//    String answerId;
     String questionId;
     String answerContent;
     HashMap<String, Comment> commentList;
     Answer(String answerContent, Question question) {
+        super();
         this.answerContent = answerContent;
         this.questionId = question.questionId;
-        this.answerId = "Ans" + UUID.randomUUID().toString();
+//        this.answerId = "Ans" + UUID.randomUUID().toString();
         commentList = new HashMap<>();
     }
 
